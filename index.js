@@ -1,11 +1,8 @@
- // Tab switching
-    function showTab(tab) {
+function showTab(tab) {
       document.getElementById("formTab").classList.add("hidden");
       document.getElementById("carouselTab").classList.add("hidden");
-      if(tab === "form") 
-        document.getElementById("formTab").classList.remove("hidden");
-      if(tab === "carousel")
-        document.getElementById("carouselTab").classList.remove("hidden");
+      if(tab === "form") document.getElementById("formTab").classList.remove("hidden");
+      if(tab === "carousel") document.getElementById("carouselTab").classList.remove("hidden");
     }
 
     // Form validation
@@ -36,11 +33,9 @@
       } else if(password !== confirmPassword){
         error = "Passwords do not match.";
       }
-      if (!error) {
-    document.getElementById("regForm").reset();
+      if(!error) this.reset();
       document.getElementById("error").innerText = error || "Registration Successful!";
-    }});
-
+    });
     // Carousel
     let index = 0;
     function moveSlide(step){
@@ -53,26 +48,16 @@
         index = 0;
       slides.style.transform = "translateX(" + (-600 * index) + "px)";
     }
-    setInterval(() => moveSlide(1), 7000);  
-    
-    
+    setInterval(() => moveSlide(1), 7000);   
     // Rating system
     var stars = document.querySelectorAll(".star");
     let selected = 0;
 
     stars.forEach(star => {
-      star.addEventListener("mouseover", function(){
-        resetStars();
-        glow(this.dataset.value);
-      });
-      star.addEventListener("mouseout", function(){
-        resetStars();
-        if(selected) glow(selected);
-      });
       star.addEventListener("click", function(){
         if(selected == this.dataset.value){
           selected = 0;
-          resetStars();
+          reset();
         } else {
           selected = this.dataset.value;
           glow(selected);
@@ -85,8 +70,7 @@
         if(star.dataset.value <= val) star.classList.add("active");
       });
     }
-    function resetStars(){
+    function reset(){
       stars.forEach(star => star.classList.remove("active"));
     }
-
     
