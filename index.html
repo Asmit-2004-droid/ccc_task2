@@ -11,7 +11,9 @@
     <a href="#" onclick="showTab('form')">Registration Form</a>
     <a href="#" onclick="showTab('carousel')">Carousel</a>
   </nav>
+
   <div class="container">
+    <!-- Registration Form -->
     <div id="formTab">
       <h2>Registration Form</h2>
       <form id="regForm">
@@ -30,15 +32,21 @@
       <p id="error" style="color:red; text-align:center;"></p>
     </div>
 
-    <!------------- Carousel ------------->
+    <!-- Carousel -->
     <div id="carouselTab" class="hidden">
-      <h2>Images</h2>
+      <h2>Image Carousel</h2>
       <div class="carousel">
         <div class="slides" id="slides">
           <img src="https://picsum.photos/id/1015/600/300" alt="Image1">
           <img src="https://picsum.photos/id/1016/600/300" alt="Image2">
           <img src="https://picsum.photos/id/1018/600/300" alt="Image3">
-          <img src="https://picsum.photos/id/1020/600/300" alt="Image3">
+          <img src="https://picsum.photos/id/1020/600/300" alt="Image4">
+          <img src="https://picsum.photos/id/1019/600/300" alt="Image5">
+          <img src="https://picsum.photos/id/1024/600/300" alt="Image6">
+          <img src="https://picsum.photos/id/1021/600/300" alt="Image7">
+          <img src="https://picsum.photos/id/1022/600/300" alt="Image8">
+          <img src="https://picsum.photos/id/1014/600/300" alt="Image9">
+          <img src="https://picsum.photos/id/1023/600/300" alt="Image10">
         </div>
         <button class="arrow left" onclick="moveSlide(-1)"><</button>
         <button class="arrow right" onclick="moveSlide(1)">></button>
@@ -46,6 +54,7 @@
 
       <!-- Rating -->
       <div class="stars" id="rating">
+        <h1>Rate Us:</h1>
         <span class="star" data-value="1">&#9733;</span>
         <span class="star" data-value="2">&#9733;</span>
         <span class="star" data-value="3">&#9733;</span>
