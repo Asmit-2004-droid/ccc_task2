@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Computing Task </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="showTab('form')">Registration Form</a>
+    <a href="#" onclick="showTab('carousel')">Carousel</a>
+  </nav>
+  <div class="container">
+    <div id="formTab">
+      <h2>Registration Form</h2>
+      <form id="regForm">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="contact" placeholder="Contact Number">
+        <select id="gender">
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <button type="submit">Register</button>
+      </form>
+      <p id="error" style="color:red; text-align:center;"></p>
+    </div>
+
+    <!------------- Carousel ------------->
+    <div id="carouselTab" class="hidden">
+      <h2>Images</h2>
+      <div class="carousel">
+        <div class="slides" id="slides">
+          <img src="https://picsum.photos/id/1015/600/300" alt="Image1">
+          <img src="https://picsum.photos/id/1016/600/300" alt="Image2">
+          <img src="https://picsum.photos/id/1018/600/300" alt="Image3">
+          <img src="https://picsum.photos/id/1020/600/300" alt="Image3">
+        </div>
+        <button class="arrow left" onclick="moveSlide(-1)"><</button>
+        <button class="arrow right" onclick="moveSlide(1)">></button>
+      </div>
+
+      <!-- Rating -->
+      <div class="stars" id="rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+    </div>
+  </div>
+    <script src="index.js"></script>
+</body>
+</html>

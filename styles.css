@@ -1,0 +1,91 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: #333;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+    nav a:hover {
+      background: #555;
+      border-radius: 5px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+   }
+
+    /* Form Styling */
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #555;
+    }
+
+    /* Carousel */
+    .carousel {
+      max-width: 600px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 600px;
+      height: 300px;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
+
+    /* Rating */
+    .stars {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .star {
+      font-size: 30px;
+      cursor: pointer;
+      color: gray;
+    }
+    .star.active, .star.hover {
+      color: gold;
+    }
