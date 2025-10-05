@@ -36,9 +36,10 @@
       } else if(password !== confirmPassword){
         error = "Passwords do not match.";
       }
-
+      if (!error) {
+    document.getElementById("regForm").reset();
       document.getElementById("error").innerText = error || "Registration Successful!";
-    });
+    }});
 
     // Carousel
     let index = 0;
@@ -87,4 +88,5 @@
     function resetStars(){
       stars.forEach(star => star.classList.remove("active"));
     }
+
     
